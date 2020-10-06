@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/{id?}', function (\App\Models\User $id) {
+
+    foreach($id->post as $posts){
+        dd($posts->title);
+        return '<br>'.$posts->title;
+    }
     return view('visitor.index');
 })->name('home.blog');
 
