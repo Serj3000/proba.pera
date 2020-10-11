@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->char('title', 255)->unique();
             $table->text('body');
             $table->integer('img');
+            $table->integer('saw')->nullable()->default(0);
             $table->timestamps();
         });
     }

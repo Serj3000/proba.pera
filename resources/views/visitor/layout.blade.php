@@ -18,11 +18,16 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8">
+                <div class="col-3">
+                    @yield('left')
+                    {{-- @include('sidebar.left') --}}
+                </div>
+                <div class="col-6">
                     @yield('blog')
                 </div>
-                <div class="col-2"></div>
+                <div class="col-3">
+                  @yield('right')
+                </div>
             </div>
         </div>
 
